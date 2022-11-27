@@ -1,0 +1,22 @@
+{
+  "name": "single-threaded-event-loop",
+  "version": "1.0.0",
+  "description": "Demo for single-threaded-event-loop",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PranayRathi/single-threaded-event-loop.git"
+  },
+  "author": "Pranay Rathi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PranayRathi/single-threaded-event-loop/issues"
+  },
+  "homepage": "https://github.com/PranayRathi/single-threaded-event-loop#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
