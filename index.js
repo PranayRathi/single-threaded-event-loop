@@ -1,7 +1,8 @@
 const express = require("express");
-const { getFibonachiNo } = require("./fibonachi");
-// const { getFibonachiNo } = require("./worker_wrapper");
+// const { getFibonachiNo } = require("./fibonachi");
+const { getFibonachiNo } = require("./worker_wrapper");
 
+const { isMainThread } = require("worker_threads");
 
 const app = express();
 
@@ -15,7 +16,7 @@ const app = express();
 // For worker demo
 app.get("/blocking", async (_, res) => {
     count++;
-  console.log("==== count", count);
+  console.log("==== count", count, isMainThread);
   const result = await getFibonachiNo(40);
   res.send("[GET] /blocking response. Result: " + result);
 });
