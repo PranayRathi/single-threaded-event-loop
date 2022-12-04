@@ -9,6 +9,13 @@ const getFibonachiNo = (number) => {
       resolve(result);
     });
 
+
+    // The 'online' event is emitted when the worker thread has started executing JavaScript code.
+
+    worker.on('online', () => {
+        console.log("==== thrad started execution", isMainThread, worker.threadId)
+    })
+
     // Listner for worker thread errors response
     worker.on("error", (err) => {
       console.log("=== Error", err);

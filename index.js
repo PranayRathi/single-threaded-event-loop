@@ -6,18 +6,15 @@ const { isMainThread } = require("worker_threads");
 
 const app = express();
 
-
+// Normal coding practise
 // app.get("/blocking", (_, res) => {
-//     const result = getFibonachiNo(40);
+//     const result = getFibonachiNo(50);
 //     res.send("[GET] /blocking response. Result: " + result);
 //   });
 
-  let count = 0;
 // For worker demo
 app.get("/blocking", async (_, res) => {
-    count++;
-  console.log("==== count", count, isMainThread);
-  const result = await getFibonachiNo(40);
+  const result = await getFibonachiNo(50);
   res.send("[GET] /blocking response. Result: " + result);
 });
 
